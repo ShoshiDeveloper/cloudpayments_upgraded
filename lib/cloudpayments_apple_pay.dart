@@ -1,16 +1,16 @@
 import 'dart:io';
 
-import 'package:cloudpayments/apple_pay_response.dart';
+import 'package:cloudpayments_upgraded/apple_pay_response.dart';
 import 'package:flutter/services.dart';
 
 /// Contains helper methods that allow you to interact with Apple Pay.
-class CloudpaymentsApplePay {
-  static const MethodChannel _channel = const MethodChannel('cloudpayments');
+class cloudpayments_upgradedApplePay {
+  static const MethodChannel _channel = const MethodChannel('cloudpayments_upgraded');
 
-  CloudpaymentsApplePay();
+  cloudpayments_upgradedApplePay();
 
   /// Checks whether an Apple Pay is available on this device and can process payment requests using
-  /// Cloudpayments payment network brands (Visa and Mastercard).
+  /// cloudpayments_upgraded payment network brands (Visa and Mastercard).
   Future<bool> isApplePayAvailable() async {
     if (Platform.isIOS) {
       try {
@@ -23,7 +23,7 @@ class CloudpaymentsApplePay {
     return false;
   }
 
-  /// Requests Apple Pay payment. Returns payment token that you can use for Cloudpayments payment by a cryptogram.
+  /// Requests Apple Pay payment. Returns payment token that you can use for cloudpayments_upgraded payment by a cryptogram.
   ///
   /// [merchantId] - your Apple Pay merchant id. You have to create it in your [Apple Developer Account](https://developer.apple.com/) before.
   ///

@@ -1,4 +1,5 @@
 # cloudpayments
+## This package is upgraded [cloudpayments](https://pub.dev/packages/cloudpayments)
 
 A Flutter plugin for integrating Cloudpaymanets in Android and iOS applications.
 
@@ -15,7 +16,7 @@ See the official documentation:
 - [Android](https://developers.cloudpayments.ru/#sdk-dlya-android)
 - [iOS](https://developers.cloudpayments.ru/#sdk-dlya-ios)
 
-<img src="https://raw.githubusercontent.com/shushper/cloudpayments/master/images/example.gif"
+<img src="https://raw.githubusercontent.com/shoshideveloper/cloudpayments_upgraded/master/images/example.gif"
 width=200 height=400/>
 
 ### Supports

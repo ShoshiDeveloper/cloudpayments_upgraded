@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:cloudpayments/google_pay_response.dart';
+import 'package:cloudpayments_upgraded/google_pay_response.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -9,10 +9,10 @@ import 'package:flutter/services.dart';
 enum GooglePayEnvironment { test, production }
 
 /// Contains helper methods that allow you to interact with Google Pay.
-class CloudpaymentsGooglePay {
-  static const MethodChannel _channel = const MethodChannel('cloudpayments');
+class cloudpayments_upgradedGooglePay {
+  static const MethodChannel _channel = const MethodChannel('cloudpayments_upgraded');
 
-  CloudpaymentsGooglePay(GooglePayEnvironment environment) {
+  cloudpayments_upgradedGooglePay(GooglePayEnvironment environment) {
     _initGooglePay(describeEnum(environment));
   }
 
@@ -23,7 +23,7 @@ class CloudpaymentsGooglePay {
   }
 
   /// Checks whether a Google Pay is available on this device and can process payment requests using
-  /// Cloudpayments payment network brands (Visa and Mastercard).
+  /// cloudpayments_upgraded payment network brands (Visa and Mastercard).
   Future<bool> isGooglePayAvailable() async {
     if (Platform.isAndroid) {
       try {
@@ -48,7 +48,7 @@ class CloudpaymentsGooglePay {
   /// In TEST environment, or if a merchant isn't recognized, a “Pay Unverified Merchant”
   /// message is displayed in the payment sheet.
   ///
-  /// [publicId] - Your Cloudpayments public id. You can obtain it in your [Cloudpayments account](https://merchant.cloudpayments.ru/)
+  /// [publicId] - Your cloudpayments_upgraded public id. You can obtain it in your [cloudpayments_upgraded account](https://merchant.cloudpayments_upgraded.ru/)
   ///
   /// Returns [GooglePayResponse]. You have to check whether response is success and if so, you can obtain
   /// payment token by [response.token]

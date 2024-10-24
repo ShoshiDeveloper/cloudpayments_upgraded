@@ -1,3 +1,5 @@
+## 0.4.2
+Upgrade sdk and flutter versions and upgrade kotlin version
 ## 0.3.0
 * Null safety.
 

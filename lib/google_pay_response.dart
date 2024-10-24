@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:cloudpayments/response_statuses.dart';
+import 'package:cloudpayments_upgraded/response_statuses.dart';
 import 'package:flutter/services.dart';
 
 class GooglePayResponse {

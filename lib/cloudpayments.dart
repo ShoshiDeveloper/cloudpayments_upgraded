@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:cloudpayments/cryptogram.dart';
-import 'package:cloudpayments/three_ds_response.dart';
+import 'package:cloudpayments_upgraded/cryptogram.dart';
+import 'package:cloudpayments_upgraded/three_ds_response.dart';
 import 'package:flutter/services.dart';
 
 /// Contains helpful methods that allow you to check payment card parameters validity and create a card cryptogram.
-class Cloudpayments {
-  static const MethodChannel _channel = const MethodChannel('cloudpayments');
+class cloudpayments_upgraded {
+  static const MethodChannel _channel = const MethodChannel('cloudpayments_upgraded');
 
   /// Checks if the given [cardNumber] is valid.
   static Future<bool> isValidNumber(String cardNumber) async {
@@ -34,7 +34,7 @@ class Cloudpayments {
   ///
   /// [cardCVC] - Card CVC or CVV code.
   ///
-  /// [publicId] - Your Cloudpayments public id. You can obtain it in your [Cloudpayments account](https://merchant.cloudpayments.ru/)
+  /// [publicId] - Your cloudpayments_upgraded public id. You can obtain it in your [cloudpayments_upgraded account](https://merchant.cloudpayments_upgraded.ru/)
   static Future<Cryptogram> cardCryptogram({
     required String cardNumber,
     required String cardDate,
@@ -52,7 +52,7 @@ class Cloudpayments {
     return Cryptogram(arguments['cryptogram'], arguments['error']);
   }
 
-  /// Shows 3DS dialog. [ascUrl], [transactionId], [paReq] are returned in response from the Cloudpayments api
+  /// Shows 3DS dialog. [ascUrl], [transactionId], [paReq] are returned in response from the cloudpayments_upgraded api
   /// if a 3DS authentication is needed.
   ///
   /// Returns [ThreeDsResponse]. You have to use parameters of [ThreeDsResponse] in post3ds api method.
